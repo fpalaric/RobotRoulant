@@ -12,7 +12,7 @@ Angle de la roue = - atan(a/L) + pi/2 avec L empattement = 0.215m
 
 Distance à parcourir = ((pi/2 - sin((a-y)/(sqrt(x²+(a-y)²))) * a
 
-Validation des calculs avec quelques exemples :
+Représentation des calculs avec quelques exemples :
 
 ![image](https://github.com/fpalaric/RobotRoulant/assets/36034881/419d4b4a-9475-4718-a995-409c77800c21)
 
