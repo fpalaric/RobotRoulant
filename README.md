@@ -7,7 +7,9 @@ Pour que le robot effectue une courbe comme ci-dessous :
 
 Après calcul : 
 Distance a = (x²+y²)/2*y
+
 Angle de la roue = - atan(a/L) + pi/2 avec L empattement = 0.215m
+
 Distance à parcourir = ((pi/2 - sin((a-y)/(sqrt(x²+(a-y)²))) * a
 
 Validation des calculs avec quelques exemples :
