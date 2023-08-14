@@ -27,8 +27,7 @@ Stepper myStepper(stepsPerRevolution, 8, 10, 9, 11);
 // Interrupt routine runs if CLK goes from HIGH to LOW
 void isr ()  {
   delay(4);  // delay for Debouncing
-  distToRun -= 0.00946; // 
-  Serial.println(distToRun);
+  TurnDetected = true; 
 }
 
 void setup ()  {
@@ -57,7 +56,13 @@ void loop ()  {
     analogWrite(PinEN,0);
     digitalWrite(PinIN1,LOW);
     digitalWrite(PinIN2,LOW);    
-  }      
+  }  
+  if(TurnDetected)
+  {
+    distToRun -= 0.00946;
+    TurnDetected = false;
+    Serial.println(distToRun);
+  }    
 }
 
 void InitDistToRun(int x, int y, double* distToRun)
